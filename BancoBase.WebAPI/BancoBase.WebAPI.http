@@ -1,0 +1,6 @@
+@BancoBase.WebAPI_HostAddress = http://localhost:5112
+
+GET {{BancoBase.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

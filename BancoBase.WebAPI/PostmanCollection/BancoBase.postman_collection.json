@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "7b9cf955-01cc-4cf7-aa42-fe62c039c50b",
+		"name": "BancoBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3394851"
+	},
+	"item": [
+		{
+			"name": "CreatePayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"concept\": \"Concepto de prueba 1\",\r\n  \"qtyProducts\": 2,\r\n  \"from\": \"A000001\",\r\n  \"to\": \"B000001\",\r\n  \"total\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:55010/api/Payment",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "55010",
+					"path": [
+						"api",
+						"Payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaymentStatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"concept\": \"Concepto de prueba 1\",\r\n  \"qtyProducts\": 2,\r\n  \"from\": \"A000001\",\r\n  \"to\": \"B000001\",\r\n  \"total\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:55010/api/Payment/14D60F26-1690-4BD2-A662-0F637C08B239/status",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "55010",
+					"path": [
+						"api",
+						"Payment",
+						"14D60F26-1690-4BD2-A662-0F637C08B239",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePaymentStatus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "2",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:55010/api/Payment/14D60F26-1690-4BD2-A662-0F637C08B239/status",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "55010",
+					"path": [
+						"api",
+						"Payment",
+						"14D60F26-1690-4BD2-A662-0F637C08B239",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
