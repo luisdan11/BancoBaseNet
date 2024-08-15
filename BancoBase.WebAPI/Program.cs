@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-//Inyección de dependencia de tipo IoC Control de Inversiones
+//Inyección de dependencia de tipo Inversión de Control IoC 
 builder.Services.Add(
     new ServiceDescriptor(
         typeof(IPaymentRepository),
@@ -33,7 +33,7 @@ builder.Services.Add(
     new ServiceDescriptor(
         typeof(ICatalogRepository),
         typeof(CatalogRepository),
-        ServiceLifetime.Singleton)
+        ServiceLifetime.Transient)
 );
 var app = builder.Build();
 
